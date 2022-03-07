@@ -9,8 +9,14 @@ const executeSQL = (context, verb, payload) => {
     const paramPayload = (payload != null) ? JSON.stringify(payload) : '';
     //context.log(payload);
 
+    var server = process.env["db_server"]
+
+    if(verb === 'get'){
+        server = process.env["db_server_read"]
+    } 
+
     const connection = new Connection({
-        server: process.env["db_server"],
+        server: server,
         authentication: {
             type: 'default',
             options: {

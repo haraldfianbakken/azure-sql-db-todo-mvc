@@ -1,7 +1,7 @@
 create schema [web];
 go
 
-create user [webapp] with password = 'Super_Str0ng*P@ZZword!'
+create user [webapp] with password = 'Super_Str0ng*P@ZZword1337!'
 go
 
 grant execute on schema::[web] to [webapp]

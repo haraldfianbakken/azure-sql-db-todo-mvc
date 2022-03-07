@@ -26,6 +26,9 @@
             "db_server": {
                 "type": "string"
             },
+            "db_server_read": {
+                "type": "string"
+            },
             "db_user": {
                 "type": "securestring"
             },
@@ -64,6 +67,7 @@
                         "location": "[parameters('location')]",
                         "properties": {
                             "db_server": "[parameters('db_server')]",
+                            "db_server_read": "[parameters('db_server_read')]",                                                        
                             "db_user": "[parameters('db_server')]",
                             "db_password": "[parameters('db_server')]",
                             "db_database": "[parameters('db_server')]"

@@ -12,7 +12,7 @@ resourceGroup=""
 appName=""
 location=""
 
-gitSource="https://github.com/Azure-Samples/azure-sql-db-todo-mvc.git"
+gitSource="https://github.com/haraldfianbakken/azure-sql-db-todo-mvc.git"
 gitToken=""
 EOF
 	echo "Enviroment file not detected."
@@ -44,6 +44,7 @@ az deployment group create \
     appLocation="./client" \
     apiLocation="./api" \
     db_server=$db_server \
+    db_server_read=$db_server_read \
     db_user=$db_user \
     db_password=$db_password \
     db_database=$db_database
